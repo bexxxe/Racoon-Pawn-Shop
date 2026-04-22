@@ -15,7 +15,7 @@ PlayerSettings:
   companyName: DefaultCompany
   productName: Racoon Pawn Shop
   defaultCursor: {fileID: 2800000, guid: 183a1badbbaf04a4bae07f83c2e31651, type: 3}
-  cursorHotspot: {x: 0, y: 0}
+  cursorHotspot: {x: 16, y: 16}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
@@ -690,11 +690,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
-  cloudProjectId: ad89cf93-b17b-4b9a-8bd5-a1524e57dfc7
+  cloudProjectId: 
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Racoon Pawn Shop
-  organizationId: rebeccahan0619
+  projectName: 
+  organizationId: 
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
