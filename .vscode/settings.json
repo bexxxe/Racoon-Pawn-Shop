@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "Racoon Pawn Shop.slnx"
+    "dotnet.defaultSolution": "Racoon-Pawn-Shop.slnx"
 }
