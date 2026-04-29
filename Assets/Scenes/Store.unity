@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.1936, y: 9.0315}
-  m_SizeDelta: {x: 656.7028, y: 81.9372}
+  m_AnchoredPosition: {x: -0.000049591, y: 11.7896}
+  m_SizeDelta: {x: 601.5411, y: 76.4211}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &87833929
 CanvasRenderer:
@@ -503,7 +503,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &257064569
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1719,8 +1719,8 @@ GameObject:
   - component: {fileID: 908595699}
   - component: {fileID: 908595698}
   m_Layer: 5
-  m_Name: Image (3)
-  m_TagString: Untagged
+  m_Name: MoonCircle
+  m_TagString: MoonCircle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
