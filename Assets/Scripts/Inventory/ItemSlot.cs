@@ -3,13 +3,22 @@ using UnityEngine.EventSystems;
 
 public class ItemSlot : MonoBehaviour, IDropHandler
 {
-        public void OnDrop(PointerEventData eventData) 
+    public bool isMat = false;
+    public DialogueManager dialogueManager;
+
+    public void OnDrop(PointerEventData eventData)
+    {
+        if (transform.childCount == 0)
         {
-        if (transform.childCount == 0) {
-        GameObject droppedItem = eventData.pointerDrag;
-        DraggableItem draggableItem = droppedItem.GetComponent<DraggableItem>();
-        draggableItem.originalParent = transform;
+            GameObject droppedItem = eventData.pointerDrag;
+            DraggableItem draggableItem = droppedItem.GetComponent<DraggableItem>();
+            draggableItem.originalParent = transform;
+
+            if (isMat)
+            {
+                bool isCorrect = droppedItem.CompareTag("MoonCircle");
+                dialogueManager.ShowDialogue(isCorrect);
+            }
         }
-       
     }
 }
