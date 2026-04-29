@@ -9,6 +9,11 @@ public class DialogueManager : MonoBehaviour
    public Transform customer; 
    public Transform matSlot;
 
+   public void TriggerLeave() 
+   {
+       StartCoroutine(AcceptAndLeave());
+   }
+
    public void ShowDialogue(bool isCorrect) 
    {
        dialogueBox.SetActive(true);
@@ -35,7 +40,7 @@ public class DialogueManager : MonoBehaviour
            Transform item = matSlot.GetChild(0);
            item.SetParent(customer);
        }
-       
+
        StartCoroutine(SlideOut()); 
    }
 
