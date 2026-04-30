@@ -6,7 +6,16 @@ using UnityEngine.UI;
 public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler 
 {
     public Image itemImage;
+    public ItemData itemData;
     [HideInInspector] public Transform originalParent;
+
+    void Start() 
+    {
+        if (itemData != null) 
+        {
+            itemImage.sprite = itemData.itemSprite;
+        }
+    }
 
     public void OnBeginDrag(PointerEventData eventData) {
         Debug.Log("OnBeginDrag");

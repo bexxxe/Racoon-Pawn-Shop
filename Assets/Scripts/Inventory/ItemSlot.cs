@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 public class ItemSlot : MonoBehaviour, IDropHandler
 {
     public bool isMat = false;
+    public ItemData requiredItem;
     public DialogueManager dialogueManager;
 
     public void OnDrop(PointerEventData eventData)
@@ -16,8 +17,11 @@ public class ItemSlot : MonoBehaviour, IDropHandler
 
             if (isMat)
             {
-                bool isCorrect = droppedItem.CompareTag("MoonCircle");
-                dialogueManager.ShowDialogue(isCorrect);
+                bool isCorrect = draggableItem.itemData == requiredItem;
+                string dialogue = isCorrect ?
+                requiredItem.correctDialogue :
+                draggableItem.itemData.wrongDialogue;
+                dialogueManager.ShowDialogue(isCorrect, dialogue);
             }
         }
     }

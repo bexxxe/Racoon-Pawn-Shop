@@ -8,38 +8,50 @@ public class DialogueManager : MonoBehaviour
    public TMP_Text dialogueText;
    public Transform customer; 
    public Transform matSlot;
+   public string requestDialogue;
+    public Animator customerAnimator;
+   private GameManager gameManager;
+
+   void Start() 
+   {
+       gameManager = FindFirstObjectByType<GameManager>();
+      
+   }
+
+   public void ShowDialogue(bool correct, string dialogue)
+    {
+         dialogueBox.SetActive(true);
+         dialogueText.text = dialogue;
+         customerAnimator.SetBool("isTalking", true);
+
+         if (correct) 
+         {   
+              StartCoroutine(AcceptAndLeave());
+         } 
+         else 
+         {
+              StartCoroutine(HideAfterDelay(2f));
+         }
+    }
 
    public void TriggerLeave() 
    {
        StartCoroutine(AcceptAndLeave());
    }
 
-   public void ShowDialogue(bool isCorrect) 
-   {
-       dialogueBox.SetActive(true);
-       if (isCorrect) 
-       {
-           dialogueText.text = "Woof! That's exactly what I needed. Thanks!";
-           StartCoroutine(AcceptAndLeave());
-       } 
-       else 
-       {
-           dialogueText.text = "Hmm... that's not quite right.";
-           StartCoroutine(HideAfterDelay(2f));
-       }
-      
-   }
-
    IEnumerator AcceptAndLeave() 
    {
        yield return new WaitForSeconds(2f);
        dialogueBox.SetActive(false);
+       customerAnimator.SetBool("isTalking", false);
 
        if (matSlot.childCount > 0) 
        {
            Transform item = matSlot.GetChild(0);
            item.SetParent(customer);
        }
+
+       gameManager.OnCustomerServed(true);
 
        StartCoroutine(SlideOut()); 
    }
@@ -48,6 +60,7 @@ public class DialogueManager : MonoBehaviour
    {
        yield return new WaitForSeconds(delay);
        dialogueBox.SetActive(false);
+       customerAnimator.SetBool("isTalking", false);
    }
 
    IEnumerator SlideOut() 
