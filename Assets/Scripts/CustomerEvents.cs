@@ -10,6 +10,19 @@ public class CustomerEvents : MonoBehaviour
     {
         CustomEvent.Trigger(gameObject, "EntryDone");
         Debug.Log("Customer has arrived!");
+        FindFirstObjectByType<DialogueManager>().ShowRequestDialogue();
+        
+        ItemSlot[] slots = FindObjectsByType<ItemSlot>(FindObjectsSortMode.None);
+        foreach (ItemSlot slot in slots) 
+        {
+            if (slot.isMat) 
+            {
+                Debug.Log("Mat slot is now interactable.");
+                slot.isInteractable = true;
+                break;
+                
+            }
+        }
     }
 
     public void OnLeave() 

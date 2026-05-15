@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1781f64592b435d448c3063caece8875, type: 3}
+  m_Name: River Lady
+  m_EditorClassIdentifier: Assembly-CSharp::CustomerData
+  customerName: River Lady
+  customerSprite: {fileID: -1333008625247902045, guid: 67bbe35c314af4575848877d6d7fa766, type: 3}
+  requestDialogue: I need some flower nector for a recipe,  do you have any?
+  requestedItem: {fileID: 11400000, guid: 15b38b18ace1ca341a465cde1b0765b4, type: 2}
+  animatorController: {fileID: 9100000, guid: 16cd1f562bcc89a4d86604129bd71620, type: 2}
+  timeline: {fileID: 11400000, guid: 66c83ed11ce800a4c8aa78854b84f68c, type: 2}
+  customerPrefab: {fileID: 7977141356687886857, guid: b976a8733dea73b46ad2c8356173dae5, type: 3}

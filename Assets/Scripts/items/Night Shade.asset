@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Night Shade
   itemSprite: {fileID: -1550497519808140441, guid: 2e46d69f74de14edc8b32c0968df762c, type: 3}
-  correctDialogue: 
+  correctDialogue: Oh yes! She will love this!
   wrongDialogue: I don't think so...
-  value: 0
+  value: 20

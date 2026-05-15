@@ -136,7 +136,7 @@ TextureImporter:
         width: 66
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -158,7 +158,7 @@ TextureImporter:
         width: 650
         height: 650
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -180,7 +180,7 @@ TextureImporter:
         width: 66
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -202,7 +202,7 @@ TextureImporter:
         width: 650
         height: 650
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -224,7 +224,7 @@ TextureImporter:
         width: 58
         height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -246,7 +246,7 @@ TextureImporter:
         width: 58
         height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -259,11 +259,55 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: PIERRE_6
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 374
+        width: 856
+        height: 719
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 33, y: 0, z: 52, w: 69}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d08c90ee0a4ce24439ecfdf7ebda2b3b
+      internalID: 1523004176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIERRE_7
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 394
+        width: 773
+        height: 642
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07435930ba33f4f4485592b302b66083
+      internalID: -1067851713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ae7b6007028de4842a5f5e12bbabf293
     internalID: 0
     vertices: []
     indices: 
@@ -279,6 +323,8 @@ TextureImporter:
       PIERRE_3: -2928082867137930939
       PIERRE_4: 6451729172675362676
       PIERRE_5: 7202581830193118230
+      PIERRE_6: 1523004176
+      PIERRE_7: -1067851713
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

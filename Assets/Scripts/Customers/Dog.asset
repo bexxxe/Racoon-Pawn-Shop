@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CustomerData
   customerName: Spirt Dog
   customerSprite: {fileID: -8158243952888235439, guid: 5f0329f5ef71b43c38812ff68aa33916, type: 3}
-  requestDialogue: 
+  requestDialogue: I have not been sleeping well at night, do you have something
+    that will give off the soft glow of the moon?
   requestedItem: {fileID: 11400000, guid: aa062522547079a41af74bf21c0b01a7, type: 2}
   animatorController: {fileID: 9100000, guid: 4849704536b594d9287d3e439e92b8c0, type: 2}
+  timeline: {fileID: 11400000, guid: 05399ce1f6dc946a0b00395221b4b8a8, type: 2}
+  customerPrefab: {fileID: 4554860252007251933, guid: bb816c4f0f4ba5444931e48b13a9e0af, type: 3}

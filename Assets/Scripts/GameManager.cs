@@ -1,21 +1,32 @@
 using UnityEngine;
+using UnityEngine.Playables;
 using TMPro;
+
 
 
 public class GameManager : MonoBehaviour
 {
     public CustomerData[] customers;
-    public GameObject customerObjects;
+    public GameObject[] customerObjects;
     public ItemSlot matSlot;
     public DialogueManager dialogueManager;
     public TMP_Text moneyText;
     public GameObject dayEndPanel;
     public TMP_Text dayEndText;
+    
 
     private int currentCustomerIndex = 0;
     private int totalMoney = 0;
+    private Vector3[] customerStartPosition;
+    private GameObject currentCustomer;
     void Start()
     {
+        customerStartPosition = new Vector3[customerObjects.Length];
+        for (int i = 0; i < customerObjects.Length; i++)
+        {
+            customerStartPosition[i] = customerObjects[i].transform.position;
+            customerObjects[i].SetActive(false);
+        }
         LoadCustomer(0);
     }
 
@@ -28,13 +39,24 @@ public class GameManager : MonoBehaviour
         } 
         
         CustomerData data = customers[index];
-        customerObjects.GetComponent<SpriteRenderer>().sprite = data.customerSprite;
-        customerObjects.GetComponent<Animator>().runtimeAnimatorController 
-            = data.animatorController;
+
+       if (currentCustomer != null) 
+            currentCustomer.gameObject.SetActive(false);
+        
+        currentCustomer = customerObjects[index];
+        
+        currentCustomer.transform.position = customerStartPosition[index];
+
+        PlayableDirector director = currentCustomer.GetComponent<PlayableDirector>();
+        director.Stop();
+        director.playableAsset = data.timeline;
+
         matSlot.requiredItem = data.requestedItem;
+        matSlot.isInteractable = false;
         dialogueManager.requestDialogue = data.requestDialogue;
-        customerObjects.SetActive(true);
-        customerObjects.GetComponent<CustomerEvents>().PlayTimeline();
+        dialogueManager.customer = currentCustomer.transform;
+        currentCustomer.gameObject.SetActive(true);
+        director.Play();
 
     }
 
