@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CustomerData
   customerName: River Lady
   customerSprite: {fileID: -1333008625247902045, guid: 67bbe35c314af4575848877d6d7fa766, type: 3}
-  requestDialogue: I need some flower nector for a recipe,  do you have any?
+  requestDialogue: I need some golden flower nectar for a recipe, do you have any?
   requestedItem: {fileID: 11400000, guid: 15b38b18ace1ca341a465cde1b0765b4, type: 2}
   animatorController: {fileID: 9100000, guid: 16cd1f562bcc89a4d86604129bd71620, type: 2}
   timeline: {fileID: 11400000, guid: 66c83ed11ce800a4c8aa78854b84f68c, type: 2}

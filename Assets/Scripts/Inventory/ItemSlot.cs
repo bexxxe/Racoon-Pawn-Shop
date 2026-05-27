@@ -12,9 +12,12 @@ public class ItemSlot : MonoBehaviour, IDropHandler
     {
         if (isMat && !isInteractable) return;
         if (eventData.pointerDrag == null) return;
+        if (transform.childCount > 0) return;
 
         GameObject draggedObject = eventData.pointerDrag;
         DraggableItem draggableItem = draggedObject.GetComponent<DraggableItem>();
+
+        draggableItem.originalParent = transform;
 
         if (transform.childCount == 0)
         {
